@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tab_size": 2,
+  "jsxSingleQuote": true,
+  "endOfLine": "crlf",
+  "eslint.autoFixOnSave": true
+}
