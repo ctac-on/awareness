@@ -1,0 +1,66 @@
+.o-button {
+    display:flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    border: 3px solid $color-blue1;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background: $color-basic-white;
+    @include text-style(label);
+    color: $color-blue1;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        background: $color-blue1;
+        color: $color-basic-white;
+    }
+    &:active, &:focus, &_on, &_on:hover {
+        background: darken($color-blue1, 25%);
+        border-color: darken($color-blue1, 25%);
+    }
+    
+    &_disable, &_disable:hover, &_disable:active, &_disable:focus {
+        cursor: auto;
+        border-color: $color-grayscale_mid;
+        color: $color-grayscale_mid;
+        background: $color-basic-white;
+    }
+}
+
+.o-button-fullColor {
+    display:flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    border: 3px solid $color-blue1;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background: $color-blue1;
+    @include text-style(label);
+    color: $color-basic-white;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    &:hover {
+        background: darken($color-blue1, 15%);
+        color: $color-basic-white;
+        border-color: darken($color-blue1, 15%);
+    }
+    &:active, &:focus, &_on, &_on:hover {
+        background: darken($color-blue1, 20%);
+         border-color: darken($color-blue1, 20%);
+        color: $color-basic-white;
+    }
+    
+    &_disable, &_disable:hover, &_disable:active, &_disable:focus {
+        cursor: auto;
+        border-color: $color-grayscale_mid;
+        background: $color-grayscale_mid;
+        color: $color-basic-white;
+    }
+}

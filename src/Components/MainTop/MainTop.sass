@@ -1,0 +1,94 @@
+@import "../../Assets/sass/settings/settings"
+
+.MainTop
+	background: linear-gradient(180deg,$color-blue3,$color-blue1)
+	padding-top: 60px
+	padding-bottom: 70px
+	&__title
+		color: #fff
+		text-transform: uppercase
+		text-align: center
+		font-size: 50px
+		text-shadow: 1px 1px 2px #000
+		padding-bottom: 90px
+		font-weight: bold
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 30px
+		&-item
+			display: flex
+			align-items: center
+			gap: 20px
+			color: #fff
+			font-size: 22px
+			line-height: 24px
+			width: 85%
+			text-shadow: 1px 1px 2px #0d0d0d
+			& span
+				color: #fffa00
+			&-icon
+				font-size: 30px
+				color: #fffa00
+	&__form
+		width: 100%
+		padding: 20px 30px
+		color: white
+		border: 3px solid rgb(65 96 156)
+		border-radius: 5px
+		background: rgb(23 56 121 / 18%)
+		&-title
+			color: white
+			opacity: .8
+			text-align: center
+			font-size: 18px
+			max-width: 250px
+			margin: 0 auto
+			line-height: 1.2
+			padding-bottom: 20px
+			& span
+				color: #fffa00
+		&-block
+			width: 100%
+			display: flex
+			flex-direction: column
+			gap: 15px
+			&-el
+				width: 100%
+			&-label
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.15
+				text-transform: uppercase
+				margin-bottom: 5px
+				display: block
+				padding-left: 2px
+				opacity: .7
+			&-input
+				box-shadow: inset 0 -3px 11px #e0e0e0
+				border: 1px solid #ced0d0
+				border-radius: 5px
+				font-size: 16px
+				padding: 10px
+				width: 100%
+		&-button
+			text-transform: uppercase
+			background: #E28229
+			border-color: #E28229
+			&:hover
+				background: darken(#E28229, 10%)
+				border-color: darken(#E28229, 5%)
+		&-rules
+			font-size: 12px
+			text-align: center
+			opacity: .6
+			outline: none
+			border: 0
+			background: none
+			color: white
+			cursor: pointer
+			& span
+				text-decoration: underline
+				text-decoration-style: dashed
+			
+		

@@ -1,0 +1,27 @@
+/*TEXT MIXINS*/
+//варианты текста: label, private и chips
+@mixin text-style($tmpl) {
+    @if $tmpl == 'label' {
+        font-weight: 900;
+        font-size: $font-size-small;
+        line-height: 1.15;
+        letter-spacing: 0.5px;
+    } @else if $tmpl == 'private' {
+        font-weight: normal;
+        font-size: $font-size-small;
+        line-height: 1.15;
+    } @else if $tmpl == 'chips' {
+        font-weight: bold;
+        font-size: $font-size-smaller;
+        line-height: 1.15;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+};
+
+@mixin text-css($weight, $size, $height: $line-height, $color: $color-basic-black) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+};
