@@ -1,0 +1,105 @@
+@import '../../Assets/sass/settings/settings'
+@import "../../Assets/sass/tools/breakpoints"
+@import "../../Assets/sass/objects/slick-slider"
+
+.MainRecommended
+	padding-top: 60px
+	padding-bottom: 70px
+	&__title
+		color: $color-text-blue_dark
+		text-align: center
+		font-size: 45px
+		font-weight: 800
+		margin-bottom: 100px
+		@include media-breakpoint-down(sm)
+			font-size: 40px
+	&__slider
+		padding: 50px 0
+		@include media-breakpoint-down(xs)
+			padding: 40px 0
+		& .slick-list
+			width: 100%
+			margin-left: auto
+			margin-right: auto
+			@include media-breakpoint-up(sm)
+				max-width: 540px
+			@include media-breakpoint-up(md)
+				max-width: 720px
+			@include media-breakpoint-up(lg)
+				max-width: 960px
+			@include media-breakpoint-up(xl)
+				max-width: 1140px
+	&__item
+		padding: 10px 30px
+		border-radius: 5px
+		height: 500px
+		@include media-breakpoint-down(xs)
+			height: 250px
+			padding: 10px 20px
+		&_0
+			background: $color-text-green_light
+		&_1
+			background: #edbd91
+		&_2
+			background: #fff6c7
+		&-wrap
+			padding-left: 15px
+			padding-right: 15px
+		&-block
+			display: flex
+			justify-content: space-between
+			width: 100%
+			height: 100%
+			&-left
+				width: 50%
+				flex-shrink: 0
+		&-title
+			padding-top: 30px
+			font-size: 40px
+			text-transform: uppercase
+			margin-bottom: 30px
+			@include media-breakpoint-down(xs)
+				font-size: 25px
+				padding-top: 25px
+		&-link
+			text-decoration: none
+			color: $color-basic-black
+			display: inline-block
+			&:hover
+				text-decoration: underline
+		&-text
+			font-size: 25px
+			padding-top: 10px
+			opacity: 0.8
+			@include media-breakpoint-down(xs)
+				font-size: 16px
+			&_s
+				font-size: 14px
+				@include media-breakpoint-down(xs)
+					font-size: 12px
+		&-img
+			object-fit: contain
+			&Wrap
+				width: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+		&-price
+			position: absolute
+			bottom: 30px
+			left: 0
+			font-size: 30px
+			opacity: 0.9
+			text-decoration: none
+			@include media-breakpoint-down(xs)
+				font-size: 28px
+				bottom: 25px
+		&-smallText
+			position: absolute
+			bottom: 15px
+			left: 0
+			font-size: 8px
+			opacity: 0.8
+	
+
+	

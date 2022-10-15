@@ -1,0 +1,47 @@
+@import '../../Assets/sass/settings/settings'
+@import "../../Assets/sass/tools/breakpoints"
+
+.MainBenefits
+	padding-top: 80px
+	padding-bottom: 60px
+	background: linear-gradient(180deg,darken($color-blue2, 5%),darken($color-blue2, 10%))
+	&__title
+		color: $color-basic-white
+		text-align: center
+		margin-bottom: 110px
+		font-size: 45px
+		font-weight: 800
+		opacity: 0.9
+		@include media-breakpoint-down(sm)
+			font-size: 40px
+	&__item
+		width: 100%
+		padding: 30px 50px
+		border: 1px solid rgb(21, 33, 67)
+		border-radius: 10px
+		background: rgba(21, 33, 67, 0.4)
+		height: 100%
+		transition: all 0.3s
+		&:hover
+			background: rgb(21, 23, 67)
+		@include media-breakpoint-down(xs)
+			padding: 20px 25px
+		&-wrapper
+			padding-bottom: 30px
+		&-title
+			text-align: center
+			padding: 5px 15px
+			text-transform: uppercase
+			font-weight: 800
+			color: #e28229
+			margin-bottom: 10px
+			font-size: 25px
+		&-text
+			color: white
+			opacity: 0.8
+			text-align: center
+			line-height: 1.5
+			font-size: 24px
+	
+	
+	

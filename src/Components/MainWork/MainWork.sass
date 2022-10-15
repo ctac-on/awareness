@@ -1,0 +1,91 @@
+@import '../../Assets/sass/settings/settings'
+@import "../../Assets/sass/tools/breakpoints"
+
+.MainWork
+	padding: 70px 0 90px
+	background: #E28229
+	&__title
+		color: $color-basic-white
+		text-align: center
+		margin-bottom: 110px
+		font-size: 45px
+		font-weight: 800
+		opacity: 0.9
+		@include media-breakpoint-down(sm)
+			font-size: 40px
+	&__block
+		gap: 50px
+		display: flex
+		width: 100%
+	
+		&-hidEl
+			width: calc((100% - 101px) / 2)
+			flex-shrink: 0
+		&-el
+			width: calc((100% - 101px) / 2)
+			flex-shrink: 0
+			box-shadow: 2px 2px 30px 0 rgb(156 156 192 / 26%)
+			border-radius: 6px
+			background-color: #fff
+			padding: 40px
+			position: relative
+			font-size: 20px
+			font-weight: 300
+			color: #141414
+			display: flex
+			align-items: center
+			&_left:after
+				content: ''
+				position: absolute
+				width: 25px
+				height: 25px
+				background: inherit
+				transform: rotate(45deg)
+				right: -10px
+			&_right:after
+				content: ''
+				position: absolute
+				width: 25px
+				height: 25px
+				background: inherit
+				transform: rotate(45deg)
+				left: -10px
+			&-bull
+				width: 45px
+				height: 45px
+				border-radius: 50%
+				background: $color-blue1
+				position: absolute
+				z-index: 1
+				display: flex
+				align-items: center
+				justify-content: center
+				color: white
+				font-size: 25px
+				&_right
+					left: 100%
+					margin-left: 28px
+				&_left
+					right: 100%
+					margin-right: 28px
+		&-line
+			width: 2px
+			background: $color-blue1
+			position: relative
+			&_top:after
+				content: ''
+				position: absolute
+				top: 0
+				height: 50%
+				left: 0
+				width: inherit
+				background: #E28229
+			&_bottm:after
+				content: ''
+				position: absolute
+				bottom: 0
+				height: 50%
+				left: 0
+				width: inherit
+				background: #E28229
+				

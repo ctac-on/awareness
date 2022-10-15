@@ -1,0 +1,30 @@
+@import '../../Assets/sass/settings/settings'
+@import "../../Assets/sass/tools/breakpoints"
+@import "../../Assets/sass/tools/mixins"
+
+.Footer
+	padding-top: 65px
+	padding-bottom: 65px
+	background: darken($color-blue2, 25%)
+	&__companyName
+		@include text-style(private)
+		color: $color-brand-green
+		text-transform: uppercase
+		margin-bottom: 10px
+		font-size: 40px
+
+	&__adress
+		@include text-style(private)
+		color: darken($color-basic-white, 20%)
+		font-size: 25px
+		@include media-breakpoint-down(md)
+			margin-bottom: 30px
+	
+		
+		&-item
+			display: block
+			padding-top: 5px
+	&__map>div
+		border-radius: 10px
+		overflow: hidden
+	

@@ -8,18 +8,16 @@ import './MainTop.sass'
 
 const LIST_ITEMS = [
   <>
-    <span>Комплексное оснащение</span> клиник лабораторным оборудованием
+    <span>Stat Fax</span> и <span>ChemWell</span> биохимические анализаторы
   </>,
   <>
-    <span>Поставка и запуск</span> отдельных лабораторных приборов
+    <span>Stat Fax</span> и <span>ChemWell</span> иммуноферментные анализаторы
   </>,
   <>
-    <span>Собственное производство</span> биохимических реактивов ПАРМА
-    ДИАГНОСТИКА
+    <span>Парма Диагностика</span> биохимические реактивы
   </>,
   <>
-    Гарантийное, сервисное и методическое <span>сопровождение</span>{' '}
-    лабораторного оборудования
+    Гарантийное, сервисное и методическое <span>сопровождение</span>
   </>,
 ]
 
@@ -48,7 +46,8 @@ function MainTop() {
           <div className='col-md-5 offset-md-1'>
             <div className='MainTop__form'>
               <div className='MainTop__form-title'>
-                Заполните форму и получите <span>прайс-лист</span> на продукцию
+                Заполните форму и получите <span>прайс-лист</span>{' '}
+                {new Date().getFullYear()}г.
               </div>
               <div className='MainTop__form-block'>
                 <div className='MainTop__form-block-el'>

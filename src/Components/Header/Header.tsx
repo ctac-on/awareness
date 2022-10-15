@@ -39,7 +39,7 @@ const Header = () => {
                   href='mailto:info@awarness-mg.ru'
                   className='Header__top-block-link'
                 >
-                  <i className='far fa-envelope'></i> info@awarness-mg.ru
+                  <i className='far fa-envelope'></i> info@awareness-mg.ru
                 </a>
                 <a href='tel:+78123242778' className='Header__top-block-link'>
                   <i className='fas fa-phone'></i> +7 812 324-27-78

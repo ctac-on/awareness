@@ -29,7 +29,7 @@ function MainProduction() {
                 <img src={chemwell} alt='chemwell' />
               </div>
               <NavLink to={'/'} className='MainProduction__el-link'>
-                Иммуноферментный анализ
+                Иммуноферментные анализаторы
               </NavLink>
             </div>
           </div>
@@ -39,7 +39,7 @@ function MainProduction() {
                 <img src={parma} alt='parma' />
               </div>
               <NavLink to={'/'} className='MainProduction__el-link'>
-                Реактивы
+                Биохимические реактивы
               </NavLink>
             </div>
           </div>
