@@ -20,7 +20,6 @@ const rootReducers = combineReducers({
   requests: requestsReducer,
 })
 
-
 const store = configureStore({
   reducer: rootReducers,
   middleware,

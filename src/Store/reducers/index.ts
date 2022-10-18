@@ -1,4 +1,4 @@
-import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAction, createSlice } from '@reduxjs/toolkit'
 import { gql } from '@redux-requests/graphql'
 import { TypeDataRecommendedFields } from '../../Models/TypeDataRecommended'
 

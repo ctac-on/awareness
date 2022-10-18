@@ -20,20 +20,22 @@
     "@typescript-eslint/eslint-plugin": "5.25.0",
     "@typescript-eslint/parser": "5.25.0",
     "bootstrap": "^5.2.1",
+    "eslint": "8.24.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-simple-import-sort": "8.0.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-airbnb-typescript": "17.0.0",
     "eslint-config-node": "4.1.0",
-    "eslint-config-prettier": "6.15.0",
     "eslint-import-resolver-typescript": "2.7.1",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-only-warn": "1.0.3",
-    "eslint-plugin-prettier": "3.4.1",
-    "eslint-plugin-react": "7.27.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
     "http-proxy-middleware": "^2.0.6",
-    "prettier": "2.6.2",
+    "prettier": "2.7.1",
     "prettier-stylelint": "0.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -66,9 +68,31 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "root": true,
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "project": "./tsconfig.json"
+    },
+    "extends": [
+      "airbnb-typescript",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:prettier/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "import",
+      "prettier",
+      "only-warn"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
     }
   },
   "browserslist": {
@@ -86,7 +110,6 @@
   "devDependencies": {
     "@types/react-maskedinput": "^4.0.6",
     "@types/react-slick": "^0.23.10",
-    "eslint": "^7.2.0",
-    "eslint-config-react-app": "^5.2.1"
+    "eslint-config-react-app": "7.0.1"
   }
 }
