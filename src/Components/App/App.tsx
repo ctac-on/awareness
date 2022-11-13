@@ -1,11 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
-import Header from '../Header'
-import Main from '../Main'
-import ModalRules from '../ModalRules'
-import Footer from '../Footer'
+import Wrapper from '../Wrapper'
 
 import store from '../../Store'
 
@@ -15,14 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Provider store={store} key='provider'>
-        <Header />
-        <Routes>
-          <Route path={'/'}>
-            <Route index element={<Main />} />
-          </Route>
-        </Routes>
-        <Footer />
-        <ModalRules />
+        <Wrapper />
       </Provider>
     </BrowserRouter>
   )
