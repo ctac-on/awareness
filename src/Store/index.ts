@@ -10,7 +10,9 @@ const sagaMiddleware = createSagaMiddleware({})
 
 const { requestsReducer, requestsMiddleware } = handleRequests({
   driver: {
-    default: createDriver({ url: 'https://backend.lab-v.ru/BACKEND/graphql' }),
+    default: createDriver({
+      url: 'https://backend.promedgarant.ru/BACKEND/graphql',
+    }),
   },
 })
 

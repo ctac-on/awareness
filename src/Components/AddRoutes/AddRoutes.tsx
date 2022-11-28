@@ -25,7 +25,7 @@ function AddRoutes() {
           path: el.link,
           element:
             el.type === 'product' ? (
-              <Product />
+              <Product title={el.title} id={el.id} type={el.entityBundle} />
             ) : el.type === 'categoryList' ? (
               <MainList tree={treePage}>
                 <CategoryList items={el.children} />

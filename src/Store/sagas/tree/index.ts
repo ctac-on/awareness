@@ -72,6 +72,7 @@ function* resolveTreeSaga(dataTree: TypePagesItems[]): any {
             link: el.path.alias,
             nodeType: 'categoryList',
             tid: dataTree[i].tid,
+            entityBundle: dataTree[i].entityBundle,
             productOptions: {
               img: el.fieldImg[0].entity.thumbnail.derivative.url,
             },

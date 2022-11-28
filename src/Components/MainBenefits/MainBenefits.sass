@@ -22,10 +22,18 @@
 		background: rgba(21, 33, 67, 0.4)
 		height: 100%
 		transition: all 0.3s
+		display: flex
+		align-items: center
+		gap: 20px
 		&:hover
 			background: rgb(21, 23, 67)
 		@include media-breakpoint-down(xs)
 			padding: 20px 25px
+		&-icon
+			color: $color-brand-orange
+			font-size: 50px
+		&:hover &-icon
+			color: lighten($color-brand-orange, 10%)
 		&-wrapper
 			padding-bottom: 30px
 		&-title

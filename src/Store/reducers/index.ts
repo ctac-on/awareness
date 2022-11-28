@@ -4,16 +4,25 @@ import { TypeDataRecommendedFields } from '../../Models/TypeDataRecommended'
 import TypePagesItems from '../../Models/TypePagesItems'
 import pagesItems from '../pagesItems'
 
+function withPayloadType<T>() {
+  return (t: T) => ({ payload: t })
+}
+
 export const startFetchingMenu = createAction('app/startFetchingMenu')
 export const startFetchingRecommended = createAction(
   'app/startFetchingRecommended',
 )
 export const startFetchingTree = createAction('app/startFetchingTree')
+export const startFetchingProduct = createAction(
+  'app/startFetchingProduct',
+  withPayloadType<{ id: string; type?: string }>(),
+)
 
 export const fetchMenuType = 'app/fetchMenuType'
 export const fetchRecommendedType = 'app/fetchRecommendedType'
 export const fetchRecommendedItemType = 'app/fetchRecommendedItemType'
 export const fetchTreeType = 'app/fetchTree'
+export const fetchProductType = 'app/fetchProduct'
 
 export const requestMenu = () => ({
   type: fetchMenuType,
@@ -216,6 +225,80 @@ export const requestRecommendedItem = (
       }
     `,
   })),
+})
+
+export const requestProduct = (id: string, type?: string) => ({
+  type: fetchProductType,
+  request: {
+    query: gql`
+       {
+       commerceProductById(id: "${id}") {
+                        ... on CommerceProduct${
+                          type ? type[0].toUpperCase() + type.slice(1) : ''
+                        } {
+                            entityLabel
+                            fieldIntrotext
+                            fieldIntroprops	
+                            fieldVetdescription
+                            variations {
+                                entity {
+                                    ... on CommerceProductVariation${
+                                      type
+                                        ? type[0].toUpperCase() + type.slice(1)
+                                        : ''
+                                    } {
+                                        entityLabel
+                                        price {
+                                          number
+                                          currencyCode
+                                        }
+                                        fieldTable {
+                                            value
+                                          }
+                                        fieldImgs {
+                                            entity{
+                                                thumbnail{
+                                                    derivative(style: BIGER) {
+                                                        url
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            fieldBrands {
+                                entity {
+                                    ... on TaxonomyTermBrands {
+                                        entityLabel
+                                        fieldCountry
+                                        fieldLogo {
+                                            entity {
+                                                thumbnail {
+                                                    derivative(style: THUMBNAIL){
+                                                      url
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            entityUrl {
+                                ... on EntityCanonicalUrl {
+                                  breadcrumb {
+                                    text
+                                    url {
+                                      path
+                                    }
+                                  }
+                                }
+                            }
+                        }
+                      }
+    }
+    `,
+  },
 })
 
 interface InitialState {

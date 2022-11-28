@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/BACKEND',
     createProxyMiddleware({
-      target: 'https://backend.lab-v.ru',
+      target: 'https://backend.promedgarant.ru',
       changeOrigin: true,
     }),
   )
