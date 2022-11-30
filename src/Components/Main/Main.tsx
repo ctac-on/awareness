@@ -5,7 +5,7 @@ import MainProduction from '../MainProduction'
 import MainBenefits from '../MainBenefits'
 import MainRecommended from '../MainRecommended'
 import MainWork from '../MainWork'
-import MainCollaboration from '../MainCollaboration'
+//import MainCollaboration from '../MainCollaboration'
 
 import './Main.sass'
 
@@ -17,7 +17,7 @@ function Main() {
       <MainBenefits />
       <MainRecommended />
       <MainWork />
-      <MainCollaboration />
+      {/*<MainCollaboration />*/}
     </div>
   )
 }

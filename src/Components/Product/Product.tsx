@@ -29,6 +29,7 @@ const Product: React.FC<ProductProps> = ({ title, id, type }) => {
 
   useEffect(() => {
     dispatch(startFetchingProduct({ id, type }))
+    window.scrollTo(0, 0)
   }, [id])
   return (
     <div className='container'>

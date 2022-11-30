@@ -203,7 +203,7 @@ export const requestRecommendedItem = (
           fieldImgs {
             entity {
               thumbnail {
-                derivative(style: BIG) {
+                derivative(style: BIGER) {
                   url
                 }
               }

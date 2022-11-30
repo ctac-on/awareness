@@ -4,7 +4,7 @@ import './MainWork.sass'
 
 function MainWork() {
   return (
-    <section className='MainWork'>
+    <section className='MainWork' id='company'>
       <h2 className='MainWork__title'>Как мы работаем</h2>
       <div className='container'>
         <div className='MainWork__block'>

@@ -5,7 +5,7 @@ import './Footer.sass'
 
 function Footer() {
   return (
-    <footer className='Footer'>
+    <footer className='Footer' id='contact'>
       <div className='container Footer'>
         <div className='row align-items-center'>
           <div className='col-md-4'>

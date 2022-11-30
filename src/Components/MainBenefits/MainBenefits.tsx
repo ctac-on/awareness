@@ -27,7 +27,7 @@ function MainBenefits() {
   ]
 
   return (
-    <section className='MainBenefits'>
+    <section className='MainBenefits' id='cooperation'>
       <div className='container'>
         {/*<h2 className='MainBenefits__title'>Преимущества работы с нами</h2>*/}
         <div className='row'>

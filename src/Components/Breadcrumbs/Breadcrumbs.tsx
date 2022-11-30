@@ -26,6 +26,12 @@ const Breadcrumbs = () => {
 
   return (
     <div className='Breadcrumbs'>
+      <div className='Breadcrumbs__itemWrapper'>
+        <Link to={'/'} className='Breadcrumbs__item'>
+          Главная
+        </Link>
+        <span> / </span>
+      </div>
       {breadcrumbs.map((el) => (
         <div className='Breadcrumbs__itemWrapper' key={el.title}>
           {el.link.toLowerCase() === editPathname.toLowerCase() ? (

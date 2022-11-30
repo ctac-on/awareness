@@ -13,7 +13,7 @@ function MainProduction() {
   const img = [statfax, chemwell, parma]
 
   return (
-    <section className='MainProduction'>
+    <section className='MainProduction' id='prod'>
       <div className='container'>
         <h2 className='MainProduction__title'>Продукция</h2>
         <div className='row'>
