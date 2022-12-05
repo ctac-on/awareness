@@ -73,24 +73,24 @@ const Product: React.FC<ProductProps> = ({ title, id, type }) => {
                   </div>
                 ))}
               </div>
-              <div className='Product__main-description-price'>
-                {content?.variations?.[indexVariant].entity.price
-                  .currencyCode === 'RUB'
-                  ? checkAndFormatValue(
-                      +content?.variations?.[indexVariant].entity.price.number,
-                      2,
-                      { withOutMinimumFraction: true },
-                    )
-                  : checkAndFormatValue(
-                      Number(
-                        content?.variations?.[indexVariant]?.entity?.price
-                          ?.number ?? 0,
-                      ) * 80,
-                      2,
-                      { withOutMinimumFraction: true },
-                    )}{' '}
-                ₽
-              </div>
+              {/*<div className='Product__main-description-price'>*/}
+              {/*  {content?.variations?.[indexVariant].entity.price*/}
+              {/*    .currencyCode === 'RUB'*/}
+              {/*    ? checkAndFormatValue(*/}
+              {/*        +content?.variations?.[indexVariant].entity.price.number,*/}
+              {/*        2,*/}
+              {/*        { withOutMinimumFraction: true },*/}
+              {/*      )*/}
+              {/*    : checkAndFormatValue(*/}
+              {/*        Number(*/}
+              {/*          content?.variations?.[indexVariant]?.entity?.price*/}
+              {/*            ?.number ?? 0,*/}
+              {/*        ) * 80,*/}
+              {/*        2,*/}
+              {/*        { withOutMinimumFraction: true },*/}
+              {/*      )}{' '}*/}
+              {/*  ₽*/}
+              {/*</div>*/}
             </div>
           </section>
           <h3 className='Product__subTitle'>СПЕЦИФИКАЦИИ</h3>
