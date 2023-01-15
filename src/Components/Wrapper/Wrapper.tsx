@@ -10,6 +10,7 @@ import AddRoutes from '../AddRoutes'
 import Footer from '../Footer'
 import ModalRules from '../ModalRules'
 import Loader from '../Loader/Loader'
+import ModalBackRing from '../ModalBackRing'
 
 import './Wrapper.sass'
 
@@ -31,6 +32,7 @@ function Wrapper() {
           <AddRoutes />
           <Footer />
           <ModalRules />
+          <ModalBackRing />
         </>
       ) : (
         <div className='Wrapper'>

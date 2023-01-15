@@ -1,0 +1,58 @@
+@import "../../Assets/sass/settings/settings"
+
+.ModalBackRing
+	width: 500px
+	padding: 30px
+	background: $color-blue1
+	max-width: 100%
+	border-radius: 10px
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+		justify-content: space-between
+		&-text
+			font-size: 20px
+			line-height: 22px
+			font-weight: 400
+			color: $color-grayscale_mid
+			text-transform: uppercase
+		&-close
+			width: 20px
+			height: 20px
+			display: flex
+			align-items: center
+			position: relative
+			justify-content: center
+			cursor: pointer
+			border: 0
+			outline: none
+			background: unset
+			&:after
+				content: ''
+				width: 2px
+				height: 100%
+				position: absolute
+				transform: rotate(-45deg)
+				background: $color-grayscale_mid
+				border-radius: 4px
+			&:before
+				content: ''
+				width: 2px
+				height: 100%
+				position: absolute
+				transform: rotate(45deg)
+				background: $color-grayscale_mid
+				border-radius: 4px
+	&__main
+		width: 100%
+		display: flex
+		gap: 10px
+		flex-direction: column
+	&__bottom
+		margin-top: 40px
+		&-rule
+			margin-top: 5px
+			text-align: center
+			width: 100%
+		

@@ -4,13 +4,12 @@ import { fetchProductType, startFetchingProduct } from '../../Store/reducers'
 import { useAppSelector } from '../../Hooks/redux'
 import TypeQueries from '../../Models/TypeRequest'
 import TypeDataProduct from '../../Models/TypeDataProduct'
-
 import { useDispatch } from 'react-redux'
+
 import Breadcrumbs from '../Breadcrumbs'
 import Loader from '../Loader/Loader'
 
 import './Product.sass'
-import checkAndFormatValue from '../../Utils/checkAndFormatValue'
 
 type ProductProps = {
   title: string

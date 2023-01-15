@@ -1,0 +1,14 @@
+.FormButton
+	text-transform: uppercase
+	background: #E28229
+	border-color: #E28229
+	&:hover
+		background: darken(#E28229, 10%)
+		border-color: darken(#E28229, 5%)
+	&:disabled
+		background: lighten(#E28229, 25%)
+		border-color: lighten(#E28229, 25%)
+		cursor: default
+		&:hover
+			background: lighten(#E28229, 25%)
+			border-color: lighten(#E28229, 25%)

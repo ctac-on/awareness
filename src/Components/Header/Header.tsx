@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { useAppDispatch, useAppSelector } from '../../Hooks/redux'
-import { startFetchingMenu, fetchMenuType } from '../../Store/reducers'
+import {
+  startFetchingMenu,
+  fetchMenuType,
+  setOpenModalRingModal,
+} from '../../Store/reducers'
 import TypeQueries from '../../Models/TypeRequest'
 import TypeDataMenu from '../../Models/TypeDataMenu'
 import { HALF_OF_PATH } from '../../Store/constant'
@@ -10,6 +14,10 @@ import { HALF_OF_PATH } from '../../Store/constant'
 import logo from '../../Assets/img/awareness.jpg'
 
 import './Header.sass'
+
+/**
+ * Header сайта
+ */
 
 const Header = () => {
   const dispatch = useAppDispatch()
@@ -20,8 +28,19 @@ const Header = () => {
   ) as TypeQueries<TypeDataMenu> | undefined
   const itemsMenu = dataMenu?.data?.menuByName?.links
 
+  // Открывваем и закрываем мобильное меню
   function handleClickBar() {
     setOpenBar(!openBar)
+  }
+
+  // Закрываем мобильное меню
+  function handleCloseBar() {
+    setOpenBar(false)
+  }
+
+  // открываем модальное окно
+  function openModalBackRing() {
+    dispatch(setOpenModalRingModal(true))
   }
 
   useEffect(() => {
@@ -39,10 +58,16 @@ const Header = () => {
                   href='mailto:info@awarness-mg.ru'
                   className='Header__top-block-link'
                 >
-                  <i className='far fa-envelope'></i> info@awareness-mg.ru
+                  <i className='far fa-envelope'>
+                    <></>
+                  </i>{' '}
+                  info@awareness-mg.ru
                 </a>
                 <a href='tel:+78123242778' className='Header__top-block-link'>
-                  <i className='fas fa-phone'></i> +7 812 324-27-78
+                  <i className='fas fa-phone'>
+                    <></>
+                  </i>{' '}
+                  +7 812 324-27-78
                 </a>
                 <span className='Header__top-block-text'>
                   Пн-Пт 09:00-17:00(СПб)
@@ -67,7 +92,9 @@ const Header = () => {
                 <i
                   className={`${openBar ? 'fas fa-times' : 'fas fa-bars'}`}
                   onClick={handleClickBar}
-                ></i>
+                >
+                  <></>
+                </i>
               </div>
               <div
                 className={`col-12 col-lg-9 Header__bottom-nav${
@@ -76,21 +103,26 @@ const Header = () => {
               >
                 <div className='row align-items-center'>
                   <div className='col-12 col-lg-9'>
-                    {!!itemsMenu?.length &&
-                      itemsMenu.map((el) => (
-                        <li key={el.label} className='Header__bottom-nav-li'>
-                          <a
-                            className='Header__bottom-nav-link'
-                            href={el?.url?.path?.replace(HALF_OF_PATH, '')}
-                          >
-                            {el.label}
-                          </a>
-                        </li>
-                      ))}
+                    {itemsMenu?.map((link) => (
+                      <li key={link.label} className='Header__bottom-nav-li'>
+                        <a
+                          className='Header__bottom-nav-link'
+                          href={link?.url?.path?.replace(HALF_OF_PATH, '')}
+                          onClick={handleCloseBar}
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
                   </div>
                   <div className='col-12 col-lg-3 Header__bottom-call'>
-                    <button className='o-button-fullColor Header__bottom-call-button'>
-                      <i className='fas fa-phone-alt Header__bottom-call-icon'></i>
+                    <button
+                      className='o-button-fullColor Header__bottom-call-button'
+                      onClick={openModalBackRing}
+                    >
+                      <i className='fas fa-phone-alt Header__bottom-call-icon'>
+                        <></>
+                      </i>
                       Обратный звонок
                     </button>
                   </div>

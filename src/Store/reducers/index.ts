@@ -306,6 +306,7 @@ interface InitialState {
   treePage: TypePagesItems[]
   breadcrumbs: TypePagesItems[]
   isFetching: boolean
+  openModalBackRing?: boolean
 }
 
 const initialState: InitialState = {
@@ -317,11 +318,19 @@ const initialState: InitialState = {
 
 export const {
   reducer,
-  actions: { setOpenModalRules, setTree, setBreadcrumbs },
+  actions: {
+    setOpenModalRules,
+    setTree,
+    setBreadcrumbs,
+    setOpenModalRingModal,
+  },
 } = createSlice({
   name: 'app',
   initialState,
   reducers: {
+    setOpenModalRingModal(state, action: PayloadAction<boolean>) {
+      state.openModalBackRing = action.payload
+    },
     setTree(state, action: PayloadAction<TypePagesItems[]>) {
       state.treePage = action.payload
       state.isFetching = false
