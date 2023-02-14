@@ -7,9 +7,10 @@ type InputFieldProps = {
   type: HTMLInputTypeAttribute
   required?: boolean
   id: string
-  name: string
+  name?: string
   children?: React.ReactNode
   value?: string
+  onChange?: (value: string) => void
 }
 
 function InputField({
@@ -19,7 +20,12 @@ function InputField({
   name,
   children,
   value,
+  onChange,
 }: InputFieldProps) {
+  const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) onChange(e.target.value)
+  }
+
   return (
     <div className='InputField'>
       <label className='InputField__label' htmlFor={id}>
@@ -34,6 +40,7 @@ function InputField({
           className='InputField__input'
           required={required}
           value={value}
+          onChange={handleChangeInput}
         />
       ) : (
         <input
@@ -43,6 +50,7 @@ function InputField({
           id={id}
           name={name}
           value={value}
+          onChange={handleChangeInput}
         />
       )}
     </div>
