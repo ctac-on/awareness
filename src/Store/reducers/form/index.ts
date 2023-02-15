@@ -17,6 +17,8 @@ export const postFormType = 'app/postFormType'
 
 function changeTypeInput(type: string) {
   switch (type) {
+    case 'textarea':
+      return 'textarea'
     case 'tel':
       return 'tel'
     default:

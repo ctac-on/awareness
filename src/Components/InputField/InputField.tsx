@@ -22,7 +22,9 @@ function InputField({
   value,
   onChange,
 }: InputFieldProps) {
-  const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeInput = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     if (onChange) onChange(e.target.value)
   }
 
@@ -42,6 +44,16 @@ function InputField({
           value={value}
           onChange={handleChangeInput}
         />
+      ) : type === 'textarea' ? (
+        <textarea
+          name={name}
+          id={id}
+          className='InputField__input InputField__textarea'
+          required={required}
+          onChange={handleChangeInput}
+        >
+          {value}
+        </textarea>
       ) : (
         <input
           type={type}

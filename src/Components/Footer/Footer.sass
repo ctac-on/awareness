@@ -11,15 +11,15 @@
 		color: $color-brand-green
 		text-transform: uppercase
 		margin-bottom: 10px
-		font-size: 40px
+		font-size: 28px
 
 	&__adress
 		@include text-style(private)
-		color: darken($color-basic-white, 20%)
-		font-size: 25px
+		color: darken($color-basic-white, 30%)
+		font-size: 20px
 		@include media-breakpoint-down(md)
 			margin-bottom: 30px
-	
+		margin-bottom: 40px
 		
 		&-item
 			display: block
@@ -27,4 +27,13 @@
 	&__map>div
 		border-radius: 10px
 		overflow: hidden
+	&__form
+		display: flex
+		width: 100%
+		gap: 10px
+		flex-direction: column
+		margin-top: -10px
+		position: relative
+		&-button
+			margin-top: 20px
 	
