@@ -29,10 +29,9 @@ function MainBenefits() {
   return (
     <section className='MainBenefits' id='cooperation'>
       <div className='container'>
-        {/*<h2 className='MainBenefits__title'>Преимущества работы с нами</h2>*/}
         <div className='row'>
           {data.map((name, id) => (
-            <div className='col-md-6 MainBenefits__item-wrapper' key={id}>
+            <div className='col-lg-6 MainBenefits__item-wrapper' key={id}>
               <div className='MainBenefits__item'>
                 <i
                   className={`${name.class} MainBenefits__item-icon`}

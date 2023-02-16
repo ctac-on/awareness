@@ -89,7 +89,7 @@ function MainTop() {
               ))}
             </ul>
           </div>
-          <div className='col-md-5 offset-md-1'>
+          <div className='col-md-6 col-lg-5 offset-lg-1'>
             <div className='MainTop__form'>
               <div className='MainTop__form-title'>
                 Заполните форму и получите <span>прайс-лист</span>{' '}

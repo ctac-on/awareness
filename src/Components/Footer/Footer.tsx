@@ -57,7 +57,7 @@ function Footer() {
     <footer className='Footer' id='contact'>
       <div className='container Footer'>
         <div className='row align-items-center'>
-          <div className='col-md-4'>
+          <div className='col-lg-4'>
             <div className='Footer__companyName'>Awareness Technology</div>
             <p className='Footer__adress'>
               194044, г. Санкт-Петербург, Выборгская наб., 29
@@ -104,7 +104,7 @@ function Footer() {
               )}
             </div>
           </div>
-          <div className='col-md-7 offset-md-1 Footer__map'>
+          <div className='col-lg-7 offset-lg-1 Footer__map'>
             <YMaps>
               <Map
                 width={'100%'}

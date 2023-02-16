@@ -17,10 +17,11 @@
 		gap: 50px
 		display: flex
 		width: 100%
-	
 		&-hidEl
 			width: calc((100% - 101px) / 2)
 			flex-shrink: 0
+			@include media-breakpoint-down(md)
+				display: none
 		&-el
 			width: calc((100% - 101px) / 2)
 			flex-shrink: 0
@@ -34,6 +35,9 @@
 			color: #141414
 			display: flex
 			align-items: center
+			@include media-breakpoint-down(md)
+				width: calc(100% - 101px)
+				margin-bottom: 20px
 			&_left:after
 				content: ''
 				position: absolute
@@ -42,14 +46,20 @@
 				background: inherit
 				transform: rotate(45deg)
 				right: -10px
-			&_right:after
-				content: ''
-				position: absolute
-				width: 25px
-				height: 25px
-				background: inherit
-				transform: rotate(45deg)
-				left: -10px
+			&_right
+				@include media-breakpoint-down(md)
+					order: 0
+				&:after
+					content: ''
+					position: absolute
+					width: 25px
+					height: 25px
+					background: inherit
+					transform: rotate(45deg)
+					left: -10px
+					@include media-breakpoint-down(md)
+						right: -10px
+						left: unset
 			&-bull
 				width: 45px
 				height: 45px
@@ -68,10 +78,17 @@
 				&_left
 					right: 100%
 					margin-right: 28px
+					@include media-breakpoint-down(md)
+						right: unset
+						margin-right: 0
+						left: 100%
+						margin-left: 28px
 		&-line
 			width: 2px
 			background: $color-blue1
 			position: relative
+			@include media-breakpoint-down(md)
+				order: 1
 			&_top:after
 				content: ''
 				position: absolute

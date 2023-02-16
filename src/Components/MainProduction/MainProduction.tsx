@@ -18,7 +18,7 @@ function MainProduction() {
         <h2 className='MainProduction__title'>Продукция</h2>
         <div className='row'>
           {pagesItems.map((el, index) => (
-            <div className='col-md-4' key={el.title}>
+            <div className='col-lg-4' key={el.title}>
               <div className='MainProduction__el'>
                 <div className='MainProduction__el-img'>
                   <img src={img[index]} alt='statfax' />

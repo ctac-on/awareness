@@ -11,6 +11,8 @@
 		font-size: 45px
 		font-weight: 800
 		margin-bottom: 100px
+		@include media-breakpoint-down(md)
+			margin-bottom: 60px
 		@include media-breakpoint-down(sm)
 			font-size: 40px
 	&__slider
@@ -32,9 +34,8 @@
 	&__item
 		padding: 10px 30px
 		border-radius: 5px
-		height: 500px
+		height: max-content
 		@include media-breakpoint-down(xs)
-			height: 250px
 			padding: 10px 20px
 		&_0
 			background: $color-text-green_light
@@ -50,9 +51,15 @@
 			justify-content: space-between
 			width: 100%
 			height: 100%
+			@include media-breakpoint-down(md)
+				flex-direction: column
+				gap: 30px
 			&-left
 				width: 50%
 				flex-shrink: 0
+				@include media-breakpoint-down(md)
+					width: 100%
+					text-align: center
 		&-title
 			padding-top: 30px
 			font-size: 40px
@@ -79,11 +86,17 @@
 					font-size: 12px
 		&-img
 			object-fit: contain
+			max-width: 100%
+			@include media-breakpoint-down(md)
+				max-height: 300px
 			&Wrap
 				width: 50%
 				display: flex
 				align-items: center
 				justify-content: center
+				@include media-breakpoint-down(md)
+					width: 100%
+					height: max-content
 		&-price
 			position: absolute
 			bottom: 30px
