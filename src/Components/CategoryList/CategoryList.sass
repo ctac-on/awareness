@@ -1,4 +1,5 @@
 @import "../../Assets/sass/settings/settings"
+@import "../../Assets/sass/tools/breakpoints"
 
 .CategoryList
 	width: 100%
@@ -19,6 +20,8 @@
 		text-decoration: none
 		box-shadow: 0 3px 5px 0 #ced0d0
 		border-radius: 5px
+		@include media-breakpoint-down(md)
+			font-size: 24px
 		&:hover
 			background: lighten($color-brand-orange, 20%)
 		

@@ -72,54 +72,22 @@ const Product: React.FC<ProductProps> = ({ title, id, type }) => {
                   </div>
                 ))}
               </div>
-              {/*<div className='Product__main-description-price'>*/}
-              {/*  {content?.variations?.[indexVariant].entity.price*/}
-              {/*    .currencyCode === 'RUB'*/}
-              {/*    ? checkAndFormatValue(*/}
-              {/*        +content?.variations?.[indexVariant].entity.price.number,*/}
-              {/*        2,*/}
-              {/*        { withOutMinimumFraction: true },*/}
-              {/*      )*/}
-              {/*    : checkAndFormatValue(*/}
-              {/*        Number(*/}
-              {/*          content?.variations?.[indexVariant]?.entity?.price*/}
-              {/*            ?.number ?? 0,*/}
-              {/*        ) * 80,*/}
-              {/*        2,*/}
-              {/*        { withOutMinimumFraction: true },*/}
-              {/*      )}{' '}*/}
-              {/*  ₽*/}
-              {/*</div>*/}
             </div>
           </section>
           <h3 className='Product__subTitle'>СПЕЦИФИКАЦИИ</h3>
           <div className='Product__table'>
-            <div className='Product__table-left'>
-              {Object.entries(
-                content?.variations?.[indexVariant]?.entity?.fieldTable
-                  ?.value ?? {},
-              ).map(
-                ([key, value]) =>
-                  Array.isArray(value) && (
-                    <div className='Product__table-row' key={key}>
-                      <div className='Product__table-row-title'>{value[0]}</div>
-                    </div>
-                  ),
-              )}
-            </div>
-            <div className='Product__table-right'>
-              {Object.entries(
-                content?.variations?.[indexVariant]?.entity?.fieldTable
-                  ?.value ?? {},
-              ).map(
-                ([key, value]) =>
-                  Array.isArray(value) && (
-                    <div className='Product__table-row' key={key}>
-                      <div className='Product__table-row-text'>{value[1]}</div>
-                    </div>
-                  ),
-              )}
-            </div>
+            {Object.entries(
+              content?.variations?.[indexVariant]?.entity?.fieldTable?.value ??
+                {},
+            ).map(
+              ([key, value]) =>
+                Array.isArray(value) && (
+                  <>
+                    <div className='Product__table-row-title'>{value[0]}</div>
+                    <div className='Product__table-row-text'>{value[1]}</div>
+                  </>
+                ),
+            )}
           </div>
         </main>
       ) : (

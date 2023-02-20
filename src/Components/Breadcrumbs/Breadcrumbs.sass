@@ -1,10 +1,13 @@
 @import "../../Assets/sass/settings/settings"
+@import "../../Assets/sass/tools/breakpoints"
 
 .Breadcrumbs
 	width: 100%
 	padding: 30px 0
 	display: flex
 	align-items: center
+	@include media-breakpoint-down(md)
+		flex-wrap: wrap
 	&__item
 		font-size: 16px
 		color: gray
@@ -14,6 +17,8 @@
 			height: 18px
 			display: flex
 			align-items: center
+			@include media-breakpoint-down(md)
+				margin-bottom: 5px
 			span
 				margin: 0 5px
 		
