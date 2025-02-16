@@ -60,7 +60,7 @@ function Footer() {
           <div className='col-lg-4'>
             <div className='Footer__companyName'>Awareness Technology</div>
             <p className='Footer__adress'>
-              194044, г. Санкт-Петербург, Выборгская наб., 29
+              196128, г. Санкт-Петербург, ул. Кузнецовская, 13
               <span className='Footer__adress-item'>
                 Телефон: +7 (812) 324-27-78
               </span>
@@ -109,9 +109,9 @@ function Footer() {
               <Map
                 width={'100%'}
                 height={'670px'}
-                defaultState={{ center: [59.968147, 30.337995], zoom: 16 }}
+                defaultState={{ center: [59.8714, 30.314557], zoom: 16 }}
               >
-                <Placemark geometry={[59.968147, 30.337995]} />
+                <Placemark geometry={[59.8714, 30.314557]} />
               </Map>
             </YMaps>
           </div>
