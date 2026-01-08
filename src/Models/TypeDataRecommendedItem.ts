@@ -6,6 +6,10 @@ export default interface TypeDataRecommendedItem {
         entityLabel: string
       }
     }
+    price: {
+      number?: number | null
+      currencyCode?: string
+    }
     fieldSpeccena: null | string
     fieldImgs: {
       entity: {

@@ -209,6 +209,10 @@ export const requestRecommendedItem = (
               }
             }
           }
+          price {
+           number
+           currencyCode
+          }
           productId {
             entity {
               ... on ${el.entity.productId.entity.__typename} {

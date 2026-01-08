@@ -11,6 +11,8 @@ import {
 import './MainRecommended.sass'
 import TypeRequest from '../../Models/TypeRequest'
 import TypeDataRecommendedItem from '../../Models/TypeDataRecommendedItem'
+import numberFormat from '../../Utils/number-format'
+import getCurrencyIcon from '../../Utils/get-currency-icon'
 
 function MainRecommended() {
   const dispatch = useAppDispatch()
@@ -69,7 +71,15 @@ function MainRecommended() {
                           Вариант: {el.commerceProductVariationById.entityLabel}
                         </span>
                       </p>
-                      <ins className='MainRecommended__item-price'></ins>
+                      <ins className='MainRecommended__item-price'>
+                        {numberFormat(
+                          el.commerceProductVariationById.price.number,
+                        )}{' '}
+                        {getCurrencyIcon({
+                          alphaCodeISOCurrency:
+                            el.commerceProductVariationById.price.currencyCode,
+                        })}
+                      </ins>
                       <div className='MainRecommended__item-smallText'></div>
                     </div>
                     <div className='MainRecommended__item-imgWrap'>
